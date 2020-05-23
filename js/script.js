@@ -1,7 +1,7 @@
 let booksData = [];
 let booksDataItems;
 let dataInfo;
-let searchResult;
+let searchResult = '';
 let http = new XMLHttpRequest();
 http.open('GET', "https://www.googleapis.com/books/v1/volumes?q=java&fbclid=IwAR0PwgJte69Xgcw1jePAWEe-ieGBO28GW-YuXLsctbTBkvSVkWyyG6n7hPA");
 http.send()
@@ -36,7 +36,7 @@ function displayBooks() {
 }
 
 
-function searchFun(trem){
+function searchFun(term){
     for(let x = 0; x < booksDataItems.length; x++){
         if(booksDataItems[x].volumeInfo.title.includes(term) == true){
             searchResult += `<div class="col-11 border my-3 mx-auto">
@@ -54,7 +54,8 @@ function searchFun(trem){
             </div>`;
         }
     }
-
+    document.getElementById('rowData').innerHTML = ''
+    document.getElementById('rowData').innerHTML = searchResult
 }
 
 
