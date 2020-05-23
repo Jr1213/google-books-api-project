@@ -1,0 +1,17 @@
+.headTitle {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.bookTittle {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 1rem 0;
+}
+.bookAuthor {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 1rem 0;
+}
